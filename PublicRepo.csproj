@@ -71,4 +71,21 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<!-- Got these from Geralds video on .net 6, are these still correct for .net 9? -->
+
+	<PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
+		<AndroidKeyStore>True</AndroidKeyStore>
+		<AndroidSigningKeyStore>..\..\Stores\Android\key.keystore</AndroidSigningKeyStore>
+		<AndroidSigningStorePass>bla</AndroidSigningStorePass>
+		<AndroidStoreKeyAlias>foo</AndroidStoreKeyAlias>
+		<AndroidSigningKeyPass>blort</AndroidSigningKeyPass>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Release'">
+		<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+		<CodesignEntitlement>Entitlements.plist</CodesignEntitlement>
+		<CodesignKey>All your base</CodesignKey>
+		<CodesignProvision>Signing</CodesignProvision>
+	</PropertyGroup>
+
 </Project>
