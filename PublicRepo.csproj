@@ -20,6 +20,9 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
+		<!-- Adding this line breaks drag and drop -->
+		<MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
+
 		<!-- Display name -->
 		<ApplicationTitle>PublicRepo</ApplicationTitle>
 
