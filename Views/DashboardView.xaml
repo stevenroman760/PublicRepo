@@ -36,7 +36,7 @@
 
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding FilterTaskListCommand}" CommandParameter="0"/>
-                    <DropGestureRecognizer DropCommand="{Binding ItemDropped}" DropCommandParameter="0"/>
+                    <DropGestureRecognizer DropCommand="{Binding ItemDroppedCommand}" DropCommandParameter="0"/>
                 </Border.GestureRecognizers>
 
             </Border>
@@ -58,7 +58,7 @@
 
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding FilterTaskListCommand}" CommandParameter="1"/>
-                    <DropGestureRecognizer DropCommand="{Binding ItemDropped}" DropCommandParameter="1"/>
+                    <DropGestureRecognizer DropCommand="{Binding ItemDroppedCommand}" DropCommandParameter="1"/>
                 </Border.GestureRecognizers>
 
             </Border>
@@ -80,7 +80,7 @@
 
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding FilterTaskListCommand}" CommandParameter="2"/>
-                    <DropGestureRecognizer DropCommand="{Binding ItemDropped}" DropCommandParameter="2"/>
+                    <DropGestureRecognizer DropCommand="{Binding ItemDroppedCommand}" DropCommandParameter="2"/>
                 </Border.GestureRecognizers>
             </Border>
 
@@ -101,7 +101,7 @@
 
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding FilterTaskListCommand}" CommandParameter="3"/>
-                    <DropGestureRecognizer DropCommand="{Binding ItemDropped}" DropCommandParameter="3"/>
+                    <DropGestureRecognizer DropCommand="{Binding ItemDroppedCommand}" DropCommandParameter="3"/>
                 </Border.GestureRecognizers>
 
             </Border>
