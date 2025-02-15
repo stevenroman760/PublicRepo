@@ -4,12 +4,18 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PublicRepo.Views"
+    xmlns:customControls="clr-namespace:CSE.Maui.CustomControls.Consumer.Views;assembly=CSE.Maui.CustomControls"
+    
+                                        
     Shell.FlyoutBehavior="Flyout"
     Title="PublicRepo">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:DashboardView}"
-        Route="MainPage" />
+    <FlyoutItem Title="Home" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+        Title="Category"
+        ContentTemplate="{DataTemplate customControls:TreeContainer}"
+        Route="CategoryPage" />
+
+    </FlyoutItem>
 
 </Shell>

@@ -20,9 +20,6 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
-		<!-- Adding this line breaks drag and drop -->
-		<MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
-
 		<!-- Display name -->
 		<ApplicationTitle>PublicRepo</ApplicationTitle>
 
@@ -69,9 +66,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\DashboardView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+	  <ProjectReference Include="..\..\CSE\src\CSE.Maui.CustomControls\CSE.Maui.CustomControls.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ViewModels\" />
+	  <Folder Include="Views\" />
 	</ItemGroup>
 
 	<!-- Got these from Geralds video on .net 6, are these still correct for .net 9? -->

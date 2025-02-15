@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CSE.Maui.CustomControls.Consumer.Helpers;
+using CSE.Maui.CustomControls.Consumer.Services;
+using CSE.Maui.CustomControls.Consumer.Views;
+using Microsoft.Extensions.Logging;
 
 namespace PublicRepo
 {
@@ -18,6 +21,10 @@ namespace PublicRepo
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+
+            builder.Services.AddSingleton<DataService>();
+            builder.Services.AddSingleton<CompanyTreeViewBuilder>();
+            builder.Services.AddTransient<TreeContainer>();
 
             return builder.Build();
         }
